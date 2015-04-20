@@ -97,7 +97,7 @@ names(subseted) <- c('subject',
 | timeBodyGyroJerk-std-Y            | timeBodyGyroJerk-std-Y            |                                 | 
 | timeBodyGyroJerk-std-Z            | timeBodyGyroJerk-std-Z            |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyAccMag-mean               | timeBodyAccMag-mean               | Time Fast Furier Transform      | 
+| timeBodyAccMag-mean               | timeBodyAccMag-mean               |  The magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag)      | 
 | timeBodyAccMag-std                | timeBodyAccMag-std                |                                 | 
 |                                   |                                   |                                 | 
 | timeGravityAccMag-mean            | timeGravityAccMag-mean            |                                 | 
