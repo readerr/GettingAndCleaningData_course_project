@@ -33,7 +33,8 @@ LAYING            SITTING           STANDING            WALKING WALKING_DOWNSTAI
 1944               1777               1906               1722               1406               1544        
 ```
   - 3.4 Appropriately labels the data set with descriptive variable names. 
-    - 3.4.1 Create format_names which uses gsub to change abbreviations in variables to actual labels
+    - 3.4.1 Create format_names which uses gsub to change abbreviations in variables to actual labels.
+    **I removed the brackets and spelled out time and frequency. I kept the camel case as I found the all lower case very difficult to read. I also preserved the dashes as it makes it much easier to use tab for quick selection of variables.**
 
     ``` r
 format_names <- function(variable) {
