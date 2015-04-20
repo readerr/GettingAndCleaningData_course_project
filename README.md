@@ -14,19 +14,19 @@ The run_analysis.R script aims at combining the train and test datasets from the
 
 #### How to run the script
 run_analysis.R is self contained. You need to:
-1. Download run_analysis.R
-2. Set the working directory to the dir containing the script
-3. Run the script in R Studio or R
+  1. Download run_analysis.R
+  2. Set the working directory to the dir containing the script
+  3. Run the script in R Studio or R
 Alternatively use source(run_analysis.R)
 
 #### Troubleshooting
 The script was created in *Version 0.98.1103 of RStudio* on *Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko)*
-1. If data is not downloading
+  1. If data is not downloading
     - If your system is different and you experience issues you may need to download the data manually from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
     - Please unzip the file and rename the folder to 'dataset'
-2. If installed packages fails
+  2. If installed packages fails
     - Please run install.packages('data.table') and install.packages('dplyr')
-3. The rest of the script should work as specified in the assignment once you have the data in the dataset folder under the working directory and the installed packages
+  3. The rest of the script should work as specified in the assignment once you have the data in the dataset folder under the working directory and the installed packages
 
 #### Raw Data source:
 > Description and link: 
