@@ -79,6 +79,7 @@ format_names <- function(variable) {
         process_names <- gsub('^t', 'time', variable)
         process_names <- gsub('^f', 'frequency', process_names)
         process_names <- gsub('\\(\\)', '', process_names)
+        process_names <- gsub('-', '', process_names)        
         process_names
 }
 
