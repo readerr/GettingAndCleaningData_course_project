@@ -99,7 +99,7 @@ names(subseted) <- c('subject',
 | timeBodyGyroJerkstdY            | timeBodyGyroJerkstdY            |                                 | 
 | timeBodyGyroJerkstdZ            | timeBodyGyroJerkstdZ            |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyAccMagmean               | timeBodyAccMagmean               |  The magnitude of these threedimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag)      | 
+| timeBodyAccMagmean               | timeBodyAccMagmean               |  The magnitude of these threedimensional signals were calculated using the Euclidean norm     | 
 | timeBodyAccMagstd                | timeBodyAccMagstd                |                                 | 
 |                                   |                                   |                                 | 
 | timeGravityAccMagmean            | timeGravityAccMagmean            |                                 | 
