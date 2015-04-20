@@ -7,9 +7,9 @@
 #### Steps the script run_analysis.r executes to clean the data
 1. Getting the data
   - 1.1 Check if dataset exists and if not 
-  - 1.1.1 Download the dataset
-  - 1.1.2 Unzip the dataset
-  - 1.1.3 Rename the dataset 
+    - 1.1.1 Download the dataset
+    - 1.1.2 Unzip the dataset
+    - 1.1.3 Rename the dataset 
 2. Check if packages exists and if not download them
   - required: data.table & dplyr
 3. Execute the steps as outlined in the assignment:
