@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Description of run_analysis.R
 
 # Purpose:
@@ -53,3 +54,6 @@ The script was created in *Version 0.98.1103 of RStudio* on *Mozilla/5.0 (Macint
             # write.csv(subseted, 'tidy_dataset.csv')
             # write.csv(tidy_mean_dataset, 'tidy_mean_dataset.csv')
     ```
+=======
+# getting_and_cleaning_data
+>>>>>>> ebdc84902408636345f81dc985542902ec449e32
