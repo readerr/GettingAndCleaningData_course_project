@@ -27,7 +27,7 @@
         - 3.3.1 Load activities
         - 3.3.2 Match the loaded activities id to subset activity_id
         - 3.3.3 Change to descriptive names and check result
-``` r
+    ``` r
 summary(subseted$activity_id)
 LAYING            SITTING           STANDING            WALKING WALKING_DOWNSTAIRS   WALKING_UPSTAIRS 
 1944               1777               1906               1722               1406               1544        
@@ -35,17 +35,18 @@ LAYING            SITTING           STANDING            WALKING WALKING_DOWNSTAI
   - 3.4 Appropriately labels the data set with descriptive variable names. 
     - 3.4.1 Create format_names which uses gsub to change abbreviations in variables to actual labels
 
-``` r
+    ``` r
 format_names <- function(variable) {
         process_names <- gsub('^t', 'time', variable)
         process_names <- gsub('^f', 'frequency', process_names)
         process_names <- gsub('\\(\\)', '', process_names)
         process_names
         }
-```
-  - 3.4.2 Rename ids to descriptive names, where format_names substitutes abbreviated names with descriptive names
+    ```
+    
+        - 3.4.2 Rename ids to descriptive names, where format_names substitutes abbreviated names with descriptive names
 
-``` r
+        ``` r
 names(subseted) <- c('subject', 
                      'activity_id', 
                      as.character(format_names( features[extract_id, 'measure'] ))
@@ -59,7 +60,7 @@ names(subseted) <- c('subject',
 
 #### Variables
 
-| Variable_name                     | Variable                          | Long name                       | 
+| Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
 | timeBodyAcc-mean-X                | timeBodyAcc-mean-X                |  Time Linear Acceleration       | 
 | timeBodyAcc-mean-Y                | timeBodyAcc-mean-Y                |                                 | 
