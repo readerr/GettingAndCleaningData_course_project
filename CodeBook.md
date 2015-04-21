@@ -65,7 +65,7 @@ names(subseted) <- c('subject',
 
 | Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
-| subject       | subject in study      |  unique subject id    | 
+| subject       | subject in study      |  subject unique id    | 
 | activity   | activity performed                |  factor with 6 levels        | 
 | timebodyaccmeanx                | timebodyaccmeanx                |  time linear acceleration       | 
 | timebodyaccmeany                | timebodyaccmeany                |                                 | 
