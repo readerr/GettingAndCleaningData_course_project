@@ -5,8 +5,8 @@
 The run_analysis.R script aims at combining the train and test datasets from the Samsung dataset linked bellow.
 
 #### The Output of run_analysis is two datasets:
-- *tidy_dataset.txt* : 1 tidy dataset containing the extracted from the raw dataset mean and std variables across the 30 subjects and 6 activities. This dataset contains **10299 rows and 68 variables**  
-- *tidy_mean_dataset.txt* : 1 tidy dataset calculating the average of each variable. This dataset contains **180 rows (30 subject x 6 activities) and 68 variables (subject, activity and 66 measures)**. 
+- (optional) *tidy_dataset.txt* : 1 tidy dataset containing the extracted from the raw dataset mean and std variables across the 30 subjects and 6 activities. This dataset contains **10299 rows and 68 variables**  
+- (required as per assignment) *tidy_mean_dataset.txt* : 1 tidy dataset calculating the average of each variable. This dataset contains **180 rows (30 subject x 6 activities) and 68 variables (subject, activity and 66 measures)**. 
 
 #### Dependencies
 - data.table
