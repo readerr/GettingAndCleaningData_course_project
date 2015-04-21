@@ -34,7 +34,7 @@ LAYING            SITTING           STANDING            WALKING WALKING_DOWNSTAI
 ```
   - 3.4 Appropriately labels the data set with descriptive variable names. 
     - 3.4.1 Create format_names which uses gsub to change abbreviations in variables to actual labels.
-    **I removed the brackets and dashes and spelled out time and frequency. I kept the camel case as I found the all lower case very difficult to read.**
+    **I removed the brackets and dashes and spelled out time and frequency. Converted to lowercase.**
 
     ``` r
 format_names <- function(variable) {
@@ -42,7 +42,7 @@ format_names <- function(variable) {
         process_names <- gsub('^f', 'frequency', process_names)
         process_names <- gsub('\\(\\)', '', process_names)
         process_names <- gsub('-', '', process_names)        
-        process_names
+        tolower(process_names)
         }
     ```
     
@@ -66,89 +66,87 @@ names(subseted) <- c('subject',
 | Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
 | subject       | subject in study      |  unique id    | 
-| activity_id   | activity performed                |  character        | 
-| timeBodyAccmeanX                | timeBodyAccmeanX                |  Time Linear Acceleration       | 
-| timeBodyAccmeanY                | timeBodyAccmeanY                |                                 | 
-| timeBodyAccmeanZ                | timeBodyAccmeanZ                |                                 | 
-| timeBodyAccstdX                 | timeBodyAccstdX                 |                                 | 
-| timeBodyAccstdY                 | timeBodyAccstdY                 |                                 | 
-| timeBodyAccstdZ                 | timeBodyAccstdZ                 |                                 | 
+| activityid   | activity performed                |  character        | 
+| timebodyaccmeanx                | timebodyaccmeanx                |  time linear acceleration       | 
+| timebodyaccmeany                | timebodyaccmeany                |                                 | 
+| timebodyaccmeanz                | timebodyaccmeanz                |                                 | 
+| timebodyaccstdx                 | timebodyaccstdx                 |                                 | 
+| timebodyaccstdy                 | timebodyaccstdy                 |                                 | 
+| timebodyaccstdz                 | timebodyaccstdz                 |                                 | 
 |                                   |                                   |                                 | 
-| timeGravityAccmeanX             | timeGravityAccmeanX             | Time Gravity Acceleration       | 
-| timeGravityAccmeanY             | timeGravityAccmeanY             |                                 | 
-| timeGravityAccmeanZ             | timeGravityAccmeanZ             |                                 | 
-| timeGravityAccstdX              | timeGravityAccstdX              |                                 | 
-| timeGravityAccstdY              | timeGravityAccstdY              |                                 | 
-| timeGravityAccstdZ              | timeGravityAccstdZ              |                                 | 
+| timegravityaccmeanx             | timegravityaccmeanx             | time gravity acceleration       | 
+| timegravityaccmeany             | timegravityaccmeany             |                                 | 
+| timegravityaccmeanz             | timegravityaccmeanz             |                                 | 
+| timegravityaccstdx              | timegravityaccstdx              |                                 | 
+| timegravityaccstdy              | timegravityaccstdy              |                                 | 
+| timegravityaccstdz              | timegravityaccstdz              |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyAccJerkmeanX            | timeBodyAccJerkmeanX            | Time Acceleration Jerk          | 
-| timeBodyAccJerkmeanY            | timeBodyAccJerkmeanY            |                                 | 
-| timeBodyAccJerkmeanZ            | timeBodyAccJerkmeanZ            |                                 | 
-| timeBodyAccJerkstdX             | timeBodyAccJerkstdX             |                                 | 
-| timeBodyAccJerkstdY             | timeBodyAccJerkstdY             |                                 | 
-| timeBodyAccJerkstdZ             | timeBodyAccJerkstdZ             |                                 | 
+| timebodyaccjerkmeanx            | timebodyaccjerkmeanx            | time acceleration jerk          | 
+| timebodyaccjerkmeany            | timebodyaccjerkmeany            |                                 | 
+| timebodyaccjerkmeanz            | timebodyaccjerkmeanz            |                                 | 
+| timebodyaccjerkstdx             | timebodyaccjerkstdx             |                                 | 
+| timebodyaccjerkstdy             | timebodyaccjerkstdy             |                                 | 
+| timebodyaccjerkstdz             | timebodyaccjerkstdz             |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyGyromeanX               | timeBodyGyromeanX               | Time Gyroscope                  | 
-| timeBodyGyromeanY               | timeBodyGyromeanY               |                                 | 
-| timeBodyGyromeanZ               | timeBodyGyromeanZ               |                                 | 
-| timeBodyGyrostdX                | timeBodyGyrostdX                |                                 | 
-| timeBodyGyrostdY                | timeBodyGyrostdY                |                                 | 
-| timeBodyGyrostdZ                | timeBodyGyrostdZ                |                                 | 
+| timebodygyromeanx               | timebodygyromeanx               | time gyroscope                  | 
+| timebodygyromeany               | timebodygyromeany               |                                 | 
+| timebodygyromeanz               | timebodygyromeanz               |                                 | 
+| timebodygyrostdx                | timebodygyrostdx                |                                 | 
+| timebodygyrostdy                | timebodygyrostdy                |                                 | 
+| timebodygyrostdz                | timebodygyrostdz                |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyGyroJerkmeanX           | timeBodyGyroJerkmeanX           | Time Gyroscope Jerk             | 
-| timeBodyGyroJerkmeanY           | timeBodyGyroJerkmeanY           |                                 | 
-| timeBodyGyroJerkmeanZ           | timeBodyGyroJerkmeanZ           |                                 | 
-| timeBodyGyroJerkstdX            | timeBodyGyroJerkstdX            |                                 | 
-| timeBodyGyroJerkstdY            | timeBodyGyroJerkstdY            |                                 | 
-| timeBodyGyroJerkstdZ            | timeBodyGyroJerkstdZ            |                                 | 
+| timebodygyrojerkmeanx           | timebodygyrojerkmeanx           | time gyroscope jerk             | 
+| timebodygyrojerkmeany           | timebodygyrojerkmeany           |                                 | 
+| timebodygyrojerkmeanz           | timebodygyrojerkmeanz           |                                 | 
+| timebodygyrojerkstdx            | timebodygyrojerkstdx            |                                 | 
+| timebodygyrojerkstdy            | timebodygyrojerkstdy            |                                 | 
+| timebodygyrojerkstdz            | timebodygyrojerkstdz            |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyAccMagmean               | timeBodyAccMagmean               |  The magnitude of these threedimensional signals were calculated using the Euclidean norm     | 
-| timeBodyAccMagstd                | timeBodyAccMagstd                |                                 | 
+| timebodyaccmagmean               | timebodyaccmagmean               |  the magnitude of these threedimensional signals were calculated using the euclidean norm     | 
+| timebodyaccmagstd                | timebodyaccmagstd                |                                 | 
 |                                   |                                   |                                 | 
-| timeGravityAccMagmean            | timeGravityAccMagmean            |                                 | 
-| timeGravityAccMagstd             | timeGravityAccMagstd             |                                 | 
+| timegravityaccmagmean            | timegravityaccmagmean            |                                 | 
+| timegravityaccmagstd             | timegravityaccmagstd             |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyAccJerkMagmean           | timeBodyAccJerkMagmean           |                                 | 
-| timeBodyAccJerkMagstd            | timeBodyAccJerkMagstd            |                                 | 
+| timebodyaccjerkmagmean           | timebodyaccjerkmagmean           |                                 | 
+| timebodyaccjerkmagstd            | timebodyaccjerkmagstd            |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyGyroMagmean              | timeBodyGyroMagmean              |                                 | 
-| timeBodyGyroMagstd               | timeBodyGyroMagstd               |                                 | 
+| timebodygyromagmean              | timebodygyromagmean              |                                 | 
+| timebodygyromagstd               | timebodygyromagstd               |                                 | 
 |                                   |                                   |                                 | 
-| timeBodyGyroJerkMagmean          | timeBodyGyroJerkMagmean          |                                 | 
-| timeBodyGyroJerkMagstd           | timeBodyGyroJerkMagstd           |                                 | 
+| timebodygyrojerkmagmean          | timebodygyrojerkmagmean          |                                 | 
+| timebodygyrojerkmagstd           | timebodygyrojerkmagstd           |                                 | 
 |                                   |                                   |                                 | 
-| frequencyBodyAccmeanX           | frequencyBodyAccmeanX           | Frequency Linear Acceleration   | 
-| frequencyBodyAccmeanY           | frequencyBodyAccmeanY           |                                 | 
-| frequencyBodyAccmeanZ           | frequencyBodyAccmeanZ           |                                 | 
-| frequencyBodyAccstdX            | frequencyBodyAccstdX            |                                 | 
-| frequencyBodyAccstdY            | frequencyBodyAccstdY            |                                 | 
-| frequencyBodyAccstdZ            | frequencyBodyAccstdZ            |                                 | 
+| frequencybodyaccmeanx           | frequencybodyaccmeanx           | frequency linear acceleration   | 
+| frequencybodyaccmeany           | frequencybodyaccmeany           |                                 | 
+| frequencybodyaccmeanz           | frequencybodyaccmeanz           |                                 | 
+| frequencybodyaccstdx            | frequencybodyaccstdx            |                                 | 
+| frequencybodyaccstdy            | frequencybodyaccstdy            |                                 | 
+| frequencybodyaccstdz            | frequencybodyaccstdz            |                                 | 
 |                                   |                                   |                                 | 
-| frequencyBodyAccJerkmeanX       | frequencyBodyAccJerkmeanX       | Frequency Jerk Acceleration     | 
-| frequencyBodyAccJerkmeanY       | frequencyBodyAccJerkmeanY       |                                 | 
-| frequencyBodyAccJerkmeanZ       | frequencyBodyAccJerkmeanZ       |                                 | 
-| frequencyBodyAccJerkstdX        | frequencyBodyAccJerkstdX        |                                 | 
-| frequencyBodyAccJerkstdY        | frequencyBodyAccJerkstdY        |                                 | 
-| frequencyBodyAccJerkstdZ        | frequencyBodyAccJerkstdZ        |                                 | 
+| frequencybodyaccjerkmeanx       | frequencybodyaccjerkmeanx       | frequency jerk acceleration     | 
+| frequencybodyaccjerkmeany       | frequencybodyaccjerkmeany       |                                 | 
+| frequencybodyaccjerkmeanz       | frequencybodyaccjerkmeanz       |                                 | 
+| frequencybodyaccjerkstdx        | frequencybodyaccjerkstdx        |                                 | 
+| frequencybodyaccjerkstdy        | frequencybodyaccjerkstdy        |                                 | 
+| frequencybodyaccjerkstdz        | frequencybodyaccjerkstdz        |                                 | 
 |                                   |                                   |                                 | 
-| frequencyBodyGyromeanX          | frequencyBodyGyromeanX          | Frequency Gyroscope             | 
-| frequencyBodyGyromeanY          | frequencyBodyGyromeanY          |                                 | 
-| frequencyBodyGyromeanZ          | frequencyBodyGyromeanZ          |                                 | 
-| frequencyBodyGyrostdX           | frequencyBodyGyrostdX           |                                 | 
-| frequencyBodyGyrostdY           | frequencyBodyGyrostdY           |                                 | 
-| frequencyBodyGyrostdZ           | frequencyBodyGyrostdZ           |                                 | 
+| frequencybodygyromeanx          | frequencybodygyromeanx          | frequency gyroscope             | 
+| frequencybodygyromeany          | frequencybodygyromeany          |                                 | 
+| frequencybodygyromeanz          | frequencybodygyromeanz          |                                 | 
+| frequencybodygyrostdx           | frequencybodygyrostdx           |                                 | 
+| frequencybodygyrostdy           | frequencybodygyrostdy           |                                 | 
+| frequencybodygyrostdz           | frequencybodygyrostdz           |                                 | 
 |                                   |                                   |                                 | 
-| frequencyBodyAccMagmean          | frequencyBodyAccMagmean          | Frequency Fast Furier Transform | 
-| frequencyBodyAccMagstd           | frequencyBodyAccMagstd           |                                 | 
+| frequencybodyaccmagmean          | frequencybodyaccmagmean          | frequency fast furier transform | 
+| frequencybodyaccmagstd           | frequencybodyaccmagstd           |                                 | 
 |                                   |                                   |                                 | 
-| frequencyBodyBodyAccJerkMagmean  | frequencyBodyBodyAccJerkMagmean  |                                 | 
-| frequencyBodyBodyAccJerkMagstd   | frequencyBodyBodyAccJerkMagstd   |                                 | 
+| frequencybodybodyaccjerkmagmean  | frequencybodybodyaccjerkmagmean  |                                 | 
+| frequencybodybodyaccjerkmagstd   | frequencybodybodyaccjerkmagstd   |                                 | 
 |                                   |                                   |                                 | 
-| frequencyBodyBodyGyroMagmean     | frequencyBodyBodyGyroMagmean     |                                 | 
-| frequencyBodyBodyGyroMagstd      | frequencyBodyBodyGyroMagstd      |                                 | 
+| frequencybodybodygyromagmean     | frequencybodybodygyromagmean     |                                 | 
+| frequencybodybodygyromagstd      | frequencybodybodygyromagstd      |                                 | 
 |                                   |                                   |                                 | 
-| frequencyBodyBodyGyroJerkMagmean | frequencyBodyBodyGyroJerkMagmean |                                 | 
-| frequencyBodyBodyGyroJerkMagstd  | frequencyBodyBodyGyroJerkMagstd  |                                 | 
-        
-        
+| frequencybodybodygyrojerkmagmean | frequencybodybodygyrojerkmagmean |                                 | 
+| frequencybodybodygyrojerkmagstd  | frequencybodybodygyrojerkmagstd  |                                 | 
         
