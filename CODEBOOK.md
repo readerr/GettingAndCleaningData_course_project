@@ -16,7 +16,7 @@
   - 3.1 Merges the training and the test sets to create one data set.
         - 3.1.1 load test & train subject data / x data / load y data
         - 3.1.2 Merge on rows test & train subject data / x data / y data
-        - 3.1.3 Merge subject, x and y data by column
+        - 3.1.3 Merge subject, x and y data by column. **Produces a data.frame of 10299 rows x 563 varaibles.**
         - 3.1.4 Sort the dataset to make inspection easier
   - 3.2 Extracts only the measurements on the mean and standard deviation for each measurement.
         - 3.2.1 Change names of merged dataset to ids v1 = 1
@@ -65,7 +65,7 @@ names(subseted) <- c('subject',
 
 | Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
-| subject       | subject in study      |  unique id    | 
+| subject       | subject in study      |  unique subject id    | 
 | activity   | activity performed                |  character        | 
 | timebodyaccmeanx                | timebodyaccmeanx                |  time linear acceleration       | 
 | timebodyaccmeany                | timebodyaccmeany                |                                 | 
