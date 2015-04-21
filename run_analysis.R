@@ -84,7 +84,7 @@ format_names <- function(variable) {
 }
 
 names(subseted) <- c('subject', 
-                     'activityId', 
+                     'activityid', 
                      as.character(format_names( features[extract_id, 'measure'] ))
                     )
 
