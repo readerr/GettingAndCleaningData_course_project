@@ -70,6 +70,8 @@ ncol(merged_dataset); ncol(subseted)
 # Uses descriptive activity names to name the activities in the data set
 activities_label <- read.table('./dataset/activity_labels.txt', col.names=c('activityId', 'activity'))
 
+activities_label$activity <- as.factor(tolower( gsub('_', '-', activities_label$activity) ))
+
 subseted$activityId <- activities_label[ match(subseted$activityId, activities_label$activityId), 'activity' ]
 summary(subseted$activityId)
 
