@@ -100,6 +100,8 @@ write.table(tidy_mean_dataset, 'tidy_mean_dataset.txt', row.name=FALSE)
 # output csvs for easier reference -- uncomment these lines to generate these
         # write.csv(subseted, 'tidy_dataset.csv')
         # write.csv(tidy_mean_dataset, 'tidy_mean_dataset.csv')
+
+# check output for the tidy mean dataset
 print('-------- view the data-----')
 view_data <- read.table('./tidy_mean_dataset.txt', header = TRUE)
 head(view_data)
