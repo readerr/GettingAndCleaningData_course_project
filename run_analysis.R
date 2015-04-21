@@ -34,8 +34,8 @@ test_x_data <- read.table('./dataset/test/X_test.txt')
 train_x_data <- read.table('./dataset/train/X_train.txt')
 
 # load y data
-test_y_data <- read.table('./dataset/test/y_test.txt', col.names=c('activity_id'))
-train_y_data <- read.table('./dataset/train/y_train.txt', col.names=c('activity_id'))
+test_y_data <- read.table('./dataset/test/y_test.txt', col.names=c('activityId'))
+train_y_data <- read.table('./dataset/train/y_train.txt', col.names=c('activityId'))
 
 # merge rows
 subject_data <- rbind(test_subject_data, train_subject_data)
@@ -44,13 +44,13 @@ y_data <- rbind(test_y_data, train_y_data)
 
 # merge dataset
 merged_dataset <- cbind(subject_data, y_data, x_data)
-# sort dataset on subject and activity_id
-merged_dataset <- merged_dataset[ order(merged_dataset$subject, merged_dataset$activity_id), ]
-head(merged_dataset[ , c('subject', 'activity_id')])
-tail(merged_dataset[ , c('subject', 'activity_id')])
+# sort dataset on subject and activityId
+merged_dataset <- merged_dataset[ order(merged_dataset$subject, merged_dataset$activityId), ]
+head(merged_dataset[ , c('subject', 'activityId')])
+tail(merged_dataset[ , c('subject', 'activityId')])
 
 # convert colnames to ids 
-names(merged_dataset) <- c('subject', 'activity_id', gsub('V','', names(merged_dataset[ , 3:ncol(merged_dataset)]) ))
+names(merged_dataset) <- c('subject', 'activityId', gsub('V','', names(merged_dataset[ , 3:ncol(merged_dataset)]) ))
 
 # extracts only the measurements on the mean and standard deviation for each measurement
 features <- read.table('./dataset/features.txt', col.names=c('measure_id', 'measure'))
@@ -63,15 +63,15 @@ extract <- sort(c(means, stds))
 extract_id <- sapply(extract, function(x) { features[x, 'measure_id'] })
 
 # subset and order the dataset. Run ncol to confirm subsetting
-subseted <- merged_dataset[ , c('subject', 'activity_id', extract_id)]
-subseted <- subseted[ order(subseted$subject, subseted$activity_id), ]
+subseted <- merged_dataset[ , c('subject', 'activityId', extract_id)]
+subseted <- subseted[ order(subseted$subject, subseted$activityId), ]
 ncol(merged_dataset); ncol(subseted)
 
 # Uses descriptive activity names to name the activities in the data set
-activities_label <- read.table('./dataset/activity_labels.txt', col.names=c('activity_id', 'activity'))
+activities_label <- read.table('./dataset/activity_labels.txt', col.names=c('activityId', 'activity'))
 
-subseted$activity_id <- activities_label[ match(subseted$activity_id, activities_label$activity_id), 'activity' ]
-summary(subseted$activity_id)
+subseted$activityId <- activities_label[ match(subseted$activityId, activities_label$activityId), 'activity' ]
+summary(subseted$activityId)
 
 # Appropriately labels the data set with descriptive variable names. 
 # Demonstrating that we can use gsub to alter the names. 
@@ -80,16 +80,16 @@ format_names <- function(variable) {
         process_names <- gsub('^f', 'frequency', process_names)
         process_names <- gsub('\\(\\)', '', process_names)
         process_names <- gsub('-', '', process_names)        
-        process_names
+        tolower(process_names)
 }
 
 names(subseted) <- c('subject', 
-                     'activity_id', 
+                     'activityId', 
                      as.character(format_names( features[extract_id, 'measure'] ))
                     )
 
 # Average of each variable for each activity and each subject
-tidy_mean_dataset <- subseted %>% group_by(subject, activity_id) %>% summarise_each(funs(mean))
+tidy_mean_dataset <- subseted %>% group_by(subject, activityId) %>% summarise_each(funs(mean))
 
 # output tidy dataset and tidy dataset mean
 write.table(subseted, 'tidy_dataset.txt', row.name=FALSE)
