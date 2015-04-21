@@ -28,9 +28,9 @@
         - 3.3.2 Match the loaded activities id to subset activityId
         - 3.3.3 Change to descriptive names and check result
     ``` r
-summary(subseted$activity_id)
-LAYING            SITTING           STANDING            WALKING WALKING_DOWNSTAIRS   WALKING_UPSTAIRS 
-1944               1777               1906               1722               1406               1544        
+summary(subseted$activityId)
+            laying            sitting           standing            walking walking-downstairs   walking-upstairs 
+              1944               1777               1906               1722               1406               1544       
 ```
   - 3.4 Appropriately labels the data set with descriptive variable names. 
     - 3.4.1 Create format_names which uses gsub to change abbreviations in variables to actual labels.
@@ -66,7 +66,7 @@ names(subseted) <- c('subject',
 | Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
 | subject       | subject in study      |  unique subject id    | 
-| activity   | activity performed                |  character        | 
+| activity   | activity performed                |  factor        | 
 | timebodyaccmeanx                | timebodyaccmeanx                |  time linear acceleration       | 
 | timebodyaccmeany                | timebodyaccmeany                |                                 | 
 | timebodyaccmeanz                | timebodyaccmeanz                |                                 | 
