@@ -84,12 +84,12 @@ format_names <- function(variable) {
 }
 
 names(subseted) <- c('subject', 
-                     'activityid', 
+                     'activity', 
                      as.character(format_names( features[extract_id, 'measure'] ))
                     )
 
 # Average of each variable for each activity and each subject
-tidy_mean_dataset <- subseted %>% group_by(subject, activityid) %>% summarise_each(funs(mean))
+tidy_mean_dataset <- subseted %>% group_by(subject, activity) %>% summarise_each(funs(mean))
 
 # output tidy dataset and tidy dataset mean
 write.table(subseted, 'tidy_dataset.txt', row.name=FALSE)

@@ -50,7 +50,7 @@ format_names <- function(variable) {
 
         ``` r
 names(subseted) <- c('subject', 
-                     'activity_id', 
+                     'activity', 
                      as.character(format_names( features[extract_id, 'measure'] ))
 )        
         ```
@@ -66,7 +66,7 @@ names(subseted) <- c('subject',
 | Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
 | subject       | subject in study      |  unique id    | 
-| activityid   | activity performed                |  character        | 
+| activity   | activity performed                |  character        | 
 | timebodyaccmeanx                | timebodyaccmeanx                |  time linear acceleration       | 
 | timebodyaccmeany                | timebodyaccmeany                |                                 | 
 | timebodyaccmeanz                | timebodyaccmeanz                |                                 | 
