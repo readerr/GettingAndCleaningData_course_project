@@ -35,7 +35,7 @@ I have tried to make it as easy as possible for you but different systems behave
 > Direct download link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
-#### Steps the script executes
+#### Steps the script executes (short. long description is in CodeBook.md)
 1. Getting the data
     - 1.1 Check if dataset exists and if not 
         - 1.1.1 Download the dataset
