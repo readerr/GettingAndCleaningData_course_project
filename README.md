@@ -6,7 +6,7 @@ The run_analysis.R script aims at combining the train and test datasets from the
 
 #### The Output of run_analysis is two datasets:
 - *tidy_dataset.txt* : 1 tidy dataset containing the extracted from the raw dataset mean and std variables across the 30 subjects and 6 activities. This dataset contains **10299 rows and 68 variables**  
-- *tidy_mean_dataset.txt* : 1 tidy dataset calculating the average of each variable. This dataset contains **180 rows (30 subject x 6 activities) and 68 variables (subject, activity_id and 66 variables)**. 
+- *tidy_mean_dataset.txt* : 1 tidy dataset calculating the average of each variable. This dataset contains **180 rows (30 subject x 6 activities) and 68 variables (subject, activity_id and 66 measures)**. 
 
 #### Dependencies
 - data.table
@@ -21,6 +21,7 @@ Alternatively use source(run_analysis.R)
 
 #### Troubleshooting
 The script was created in *Version 0.98.1103 of RStudio* on *Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko)*
+I have tried to make it as easy as possible for you but different systems behave differently. Here is a guideline on how to resolve possible issues:
   1. If data is not downloading
     - If your system is different and you experience issues you may need to download the data manually from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
     - Please unzip the file and rename the folder to 'dataset'
