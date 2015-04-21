@@ -22,10 +22,10 @@
         - 3.2.1 Change names of merged dataset to ids v1 = 1
         - 3.2.2 Load features.txt
         - 3.2.3 Find the mean and std variables with grep. Results in extract_id which can be used directly to subset the main dataset
-        - 3.2.4 Subset the merged dataset
+        - 3.2.4 Subset the merged dataset. **Produces a data.frame of 10299 rows x 68 varaibles.**
   - 3.3 Uses descriptive activity names to name the activities in the data set
         - 3.3.1 Load activities
-        - 3.3.2 Match the loaded activities id to subset activity_id
+        - 3.3.2 Match the loaded activities id to subset activityId
         - 3.3.3 Change to descriptive names and check result
     ``` r
 summary(subseted$activity_id)
@@ -54,14 +54,14 @@ names(subseted) <- c('subject',
                      as.character(format_names( features[extract_id, 'measure'] ))
 )        
         ```
-  - 3.5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-    - 3.5.1 Use dplyr package to group the variables and calucalte the mean on each group
+  - 3.5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+    - 3.5.1 Use dplyr package to group the variables and calucalte the mean on each group. **Produces a data.frame of 180 rows x 68 varaibles.**
 
 #### The Output:
    -  *tidy_dataset.txt* : 1 tidy dataset containing the extracted from the raw dataset mean and std variables across the 30 subjects and 6 activities. This dataset contains **10299 rows and 68 variables**  
    -  *tidy_mean_dataset.txt* : 1 tidy dataset calculating the average of each variable. This dataset contains **180 rows (30 subject x 6 activities) and 68 variables (subject, activity and 66 variables)**. 
 
-#### Variables
+#### Variables in tidy_mean_dataset.txt from step 5
 
 | Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
