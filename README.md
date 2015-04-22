@@ -35,7 +35,6 @@ I have tried to make it as easy as possible for you but different systems behave
 > Direct download link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
-#### Steps the script executes
 #### Steps the script run_analysis.r executes to clean the data
 1. Getting the data
   - 1.1 Check if dataset exists and if not 
