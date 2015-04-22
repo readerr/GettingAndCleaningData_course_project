@@ -10,6 +10,7 @@ The run_analysis.R script aims at combining the train and test datasets from the
 - Readme.md > this document explaing how run_analysis work
 - tidy_mean_dataset.txt > the required output from the assignment containg the average of all variables grouped by activity and subject
 - tidy_dataset.txt > the breakdown by activity prior to aggregating the data in tidy_mean_dataset.txt
+- dataset > a folder containg the raw data
 
 #### The Output of run_analysis is two datasets:
 - (optional) *tidy_dataset.txt* : 1 tidy dataset containing the extracted from the raw dataset mean and std variables across the 30 subjects and 6 activities. This dataset contains **10299 rows and 68 variables**  
