@@ -24,8 +24,8 @@ The run_analysis.R script aims at combining the train and test datasets from the
 run_analysis.R is self contained. You need to:
   1. Download run_analysis.R
   2. Set the working directory to the dir containing the script
-  3. Run the script in R Studio or R
-Alternatively use source(run_analysis.R)
+  3. Run the script in R Studio or R. 
+Alternatively save run_analysis.r and then run source('run_analysis.R') from the working directory. 
 
 #### Troubleshooting
 The script was created in *Version 0.98.1103 of RStudio* on *Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko)*
