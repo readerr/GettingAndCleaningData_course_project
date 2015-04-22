@@ -88,11 +88,7 @@ names(subseted) <- c('subject',
   - 3.5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
     - 3.5.1 Use dplyr package to group the variables and calucalte the mean on each group. **Produces a data.frame of 180 rows x 68 varaibles.**
 
-#### The Output:
-   -  *tidy_dataset.txt* : 1 tidy dataset containing the extracted from the raw dataset mean and std variables across the 30 subjects and 6 activities. This dataset contains **10299 rows and 68 variables**  
-   -  *tidy_mean_dataset.txt* : 1 tidy dataset calculating the average of each variable. This dataset contains **180 rows (30 subject x 6 activities) and 68 variables (subject, activity and 66 measures)**. 
-
-4. There is an option to generate csvs as well for easier reference. If you desire to do so, please uncomment the following lines at the very end of run_analysis.R
+  4. There is an option to generate csvs as well for easier reference. If you desire to do so, please uncomment the following lines at the very end of run_analysis.R
 
     ```r
             # write.csv(subseted, 'tidy_dataset.csv')
