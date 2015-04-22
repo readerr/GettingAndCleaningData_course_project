@@ -15,11 +15,10 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
         > http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 > Direct download link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-#### Notes: 
+####Notes: 
 ======
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
-
 - For a complete description of the raw data source please view the readme.txt in the dataset folder.
 
 
@@ -40,7 +39,7 @@ Finally the data were grouped by activity by unique subject and the mean (averag
 | Variable_name                     | Variable                          | Additional meta data            | 
 |-----------------------------------|-----------------------------------|---------------------------------| 
 | subject       | subject in study      |  subject unique id    | 
-| activity   | activity performed                |  factor with 6 levels        | 
+| activity   | activity performed                |  the 6 unique activities         | 
 | timebodyaccmeanx                | timebodyaccmeanx                |  time body linear acceleration       | 
 | timebodyaccmeany                | timebodyaccmeany                |                                 | 
 | timebodyaccmeanz                | timebodyaccmeanz                |                                 | 
